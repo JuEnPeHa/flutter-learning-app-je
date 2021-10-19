@@ -4,4 +4,4 @@ A new Flutter social media application.
 
 ## Getting Started
 
-The app is an Slider of Videos.
+The app is an a gallery.
