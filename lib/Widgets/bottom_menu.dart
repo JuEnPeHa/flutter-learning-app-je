@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:social_network_test/pages/example_page.dart';
 import 'package:social_network_test/pages/explore_page.dart';
 import 'package:social_network_test/pages/principal_page.dart';
 
@@ -44,6 +45,9 @@ class _BottomMenuYouCloneState extends State<BottomMenuYouClone> {
             case 1:
               //Navigator.pushNamed(context, ExplorePage.id);
               Navigator.pushReplacementNamed(context, ExplorePage.id);
+              break;
+            case 2:
+              Navigator.pushReplacementNamed(context, ExamplePage.id);
               break;
             default:
           }

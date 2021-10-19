@@ -4,11 +4,12 @@ class VideoCard {
   String views;
   String thumbnail;
   String nameChannel;
-  VideoCard(/*String s0, String s1, String s2, String s3, String s4,*/ {this.duration,
-      this.nameChannel,
-      this.thumbnail,
-      this.title,
-      this.views});
+  VideoCard(/*String s0, String s1, String s2, String s3, String s4,*/ {
+    required this.duration,
+      required this.nameChannel,
+      required this.thumbnail,
+      required this.title,
+      required this.views});
 
   String viewsVideo(int views){
     //String viewString = this.views.toString();
