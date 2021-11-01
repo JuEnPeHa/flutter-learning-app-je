@@ -1,9 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:social_network_test/pages/chat_page.dart';
-import 'package:social_network_test/pages/feed_page.dart';
-import 'package:social_network_test/pages/home_page.dart';
-import 'package:social_network_test/pages/profile_page.dart';
+import 'package:social_network_test/Widgets/constants.dart';
 
 class PrincipalPage extends StatefulWidget {
   static String id = "principal_page";
@@ -14,12 +11,7 @@ class PrincipalPage extends StatefulWidget {
 
 class _PrincipalPageState extends State<PrincipalPage> {
   int currentIndex = 0;
-  final screens = [
-    HomePage(),
-    FeedPage(),
-    ChatPage(),
-    ProfilePage(),
-  ];
+
 
   @override
   Widget build(BuildContext context) => Scaffold(

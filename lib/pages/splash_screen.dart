@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:social_network_test/Widgets/constants.dart';
 import 'package:social_network_test/pages/auth_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -38,10 +40,12 @@ class _SplashScreenState extends State<SplashScreen> {
               Spacer(),
               Center(
                 child: FractionallySizedBox(widthFactor: 0.8,
-                  child: Image.asset("assets/images/JEPH.png",
-                    /*height: 50,*/
-                  ),
+                  child: CircleAvatar(
+                      radius: 100 ,
+                      backgroundColor: Colors.white54,
+                      child: SvgPicture.asset(logoNEAR, color: Colors.white),
                 ),
+              ),
               ),
               Spacer(),
               CircularProgressIndicator(),

@@ -5,6 +5,7 @@ import 'package:social_network_test/Widgets/login_form.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social_network_test/Widgets/sign_up_form.dart';
 import 'package:social_network_test/Widgets/social_buttons.dart';
+import 'package:social_network_test/pages/principal_page.dart';
 
 class AuthScreen extends StatefulWidget {
   static String id = "auth_screen";
@@ -46,7 +47,6 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
   }
 
   Widget build(BuildContext context) {
-    final String logoNEAR = 'assets/images/nearLogos/near_icon_wht.svg';
     final _size = MediaQuery.of(context).size;
     double espacioBottom = MediaQuery.of(context).viewInsets.bottom;
     var keyboardHide = true;
@@ -153,6 +153,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                           }
                           else {
                             //Login
+                            Navigator.pushReplacementNamed(context, PrincipalPage.id);
                           }
                         },
                         child: Container(
