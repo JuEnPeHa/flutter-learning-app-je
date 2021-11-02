@@ -134,7 +134,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
               AnimatedPositioned(
                   duration: defaultDuration * 0.5,
                   bottom: keyboardHide ? _isShowingSignUp ? _size.height / 3 : _size.height * 0.3 : _size.height * 0.075,
-                  left: _isShowingSignUp ? 0 : ((_size.width / 5 * 4.5) / 4),
+                  left: _isShowingSignUp ? 0 : _size.width <= limitWidth ? ((_size.width / 5 * 4.5) / 4) : _size.width * 0.35,
                   child: AnimatedDefaultTextStyle(
                     duration: defaultDuration,
                     textAlign: TextAlign.center,
@@ -162,7 +162,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                           width: 160,
                           //color: Colors.redAccent,
                           child: Text(
-                            "Log In".toUpperCase(),
+                            "Iniciar Sesión".toUpperCase(),
                           ),
                         ),
                       ),
@@ -174,7 +174,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
               AnimatedPositioned(
                 duration: defaultDuration * 0.5,
                 bottom: keyboardHide ? !_isShowingSignUp ? _size.height / 3 : _size.height * 0.3 : _size.height * 0.075,
-                right: _isShowingSignUp ? ((_size.width / 5 * 4.5) / 4) : 0,
+                right: !_isShowingSignUp ? 0 : _size.width <= limitWidth ? ((_size.width / 5 * 4.5) / 4) : _size.width * 0.35,
                 child: AnimatedDefaultTextStyle(
                   duration: defaultDuration,
                   textAlign: TextAlign.center,
@@ -201,7 +201,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                         width: 160,
                         //color: Colors.redAccent,
                         child: Text(
-                          "Sign Up".toUpperCase(),
+                          "Registrarse ".toUpperCase(),// + _size.toString(),
                         ),
                       ),
                     ),

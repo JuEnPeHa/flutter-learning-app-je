@@ -16,9 +16,10 @@ class _PrincipalPageState extends State<PrincipalPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
-      title: Text('Texto de Ejemplo 1'),
+      title: Text(screenTitles[currentIndex]),
+      /*Text('Texto de Ejemplo 1'),
       centerTitle: true,
-      backgroundColor: Colors.brown,
+      backgroundColor: Colors.brown,*/
 
     ),
     
@@ -27,11 +28,12 @@ class _PrincipalPageState extends State<PrincipalPage> {
         children: screens,
     ),
 
+    //endDrawer: Drawer(),
     drawer: Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
+          /*DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.blueAccent
               ),
@@ -44,10 +46,19 @@ class _PrincipalPageState extends State<PrincipalPage> {
                   Expanded(child: Image.network('https://cdn.shopify.com/s/files/1/0026/8291/2880/products/ID_HardCover_Book_2.png?v=1614275782'))
                 ],
               ),
+          ),*/
+          UserAccountsDrawerHeader(
+            accountName: Text("Juan Enrique"),
+            accountEmail: Text("example@gmail.com"),
+          currentAccountPicture: CircleAvatar(
+              backgroundImage: NetworkImage('https://cdn.shopify.com/s/files/1/0026/8291/2880/products/ID_HardCover_Book_2.png?v=1614275782')),
           ),
           ListTile(
             leading: Icon(Icons.account_circle_outlined),
             title: Text('Perfil'),
+            subtitle: Text("Subtitle"),
+            trailing: Icon(Icons.save_alt_rounded),
+            onTap: (){},
           ),
           ListTile(
             leading: Icon(Icons.message),
@@ -75,7 +86,7 @@ class _PrincipalPageState extends State<PrincipalPage> {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.chat),
-          label: 'Chat',
+          label: 'Snippets',
           backgroundColor: Colors.yellow,
         ),
         BottomNavigationBarItem(
@@ -83,6 +94,11 @@ class _PrincipalPageState extends State<PrincipalPage> {
           label: 'Profile',
           backgroundColor: Colors.green,
         ),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.sports_soccer_outlined),
+            label: 'Examenes',
+            backgroundColor: Colors.deepOrangeAccent
+          ),
       ],
     ),
   );

@@ -16,6 +16,7 @@ class LoginForm extends StatelessWidget {
               Spacer(),
               TextFormField(
                 decoration: InputDecoration(
+                  //border: OutlineInputBorder(),
                   hintText: "Email",
                 ),
               ),
@@ -24,6 +25,7 @@ class LoginForm extends StatelessWidget {
               child: TextFormField(
                 obscureText: true,
                 decoration: InputDecoration(
+                  //border: OutlineInputBorder(),
                   hintText: "Password"
                 ),
               ),

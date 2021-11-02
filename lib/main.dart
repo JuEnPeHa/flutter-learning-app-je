@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_network_test/Widgets/constants.dart';
 import 'package:social_network_test/pages/auth_screen.dart';
-import 'package:social_network_test/pages/explore_page.dart';
 import 'package:social_network_test/pages/principal_page.dart';
 import 'package:social_network_test/pages/splash_screen.dart';
 
@@ -31,7 +30,6 @@ class MyApp extends StatelessWidget {
       //initialRoute: PrincipalPage.id,
       routes: {
         PrincipalPage.id:(_) => PrincipalPage(),
-        ExplorePage.id:(_) => ExplorePage(),
         AuthScreen.id:(_) => AuthScreen(),
       },
     );
