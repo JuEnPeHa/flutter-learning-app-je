@@ -16,7 +16,7 @@ class SignUpForm extends StatelessWidget {
             Spacer(),
             TextFormField(
               decoration: InputDecoration(
-                hintText: "Email",
+                hintText: ingles ? "Email" : "Correo Electronico",
               ),
             ),
             Padding(
@@ -24,14 +24,14 @@ class SignUpForm extends StatelessWidget {
               child: TextFormField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  hintText: "Password"
+                  hintText: ingles ? "Password" : "Contraseña"
                 ),
               ),
             ),
             TextFormField(
               obscureText: true,
               decoration: InputDecoration(
-                hintText: "Confirm Password",
+                hintText: ingles ? "Confirm Password" : "Confirmar Contraseña",
               ),
             ),
             Spacer(flex: 2)

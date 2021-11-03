@@ -17,7 +17,7 @@ class LoginForm extends StatelessWidget {
               TextFormField(
                 decoration: InputDecoration(
                   //border: OutlineInputBorder(),
-                  hintText: "Email",
+                  hintText: ingles ? "Email" : "Correo Electronico",
                 ),
               ),
               Padding(
@@ -26,14 +26,14 @@ class LoginForm extends StatelessWidget {
                 obscureText: true,
                 decoration: InputDecoration(
                   //border: OutlineInputBorder(),
-                  hintText: "Password"
+                  hintText: ingles ? "Password" : "Contraseña"
                 ),
               ),
               ),
               TextButton(
                   onPressed: () {},
                   child: Text(
-                    "Forgot Password?",
+                    ingles ? "Forgot Password?" : "¿Olvidaste tu Contraseña?",
                     style: TextStyle(color: Colors.white),
                   ),
               ),

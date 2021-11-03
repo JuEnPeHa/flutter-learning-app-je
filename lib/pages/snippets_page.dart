@@ -22,6 +22,9 @@ class _SnippetsPageState extends State<SnippetsPage> {
     var respuesta = await http.get(Uri.parse(urlSnippets));
     data = jsonDecode(respuesta.body);
     print(data);
+    if (data != null) {
+      setState(() {});
+    }
   }
 
   @override

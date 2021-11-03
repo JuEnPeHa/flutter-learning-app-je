@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_network_test/Widgets/bottom_menu.dart';
 import 'package:social_network_test/Widgets/constants.dart';
 import 'package:social_network_test/pages/auth_screen.dart';
 import 'package:social_network_test/pages/principal_page.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo JEPH',
+      title: 'NEAR Learning App',
       debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
                 vertical: defaultPadding * 1.2, horizontal: defaultPadding),
           ),
         ),
-      home: SplashScreen(),
+      home: SplashScreen() /*BottomMenuLA()*/,
       //initialRoute: PrincipalPage.id,
       routes: {
         PrincipalPage.id:(_) => PrincipalPage(),

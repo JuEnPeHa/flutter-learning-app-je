@@ -34,6 +34,12 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
     _isShowingSignUp ? _animationController.forward() : _animationController.reverse();
   }
 
+  void stateIngles() {
+    setState( () {
+      ingles = !ingles;
+    });
+  }
+
   @override
   void initState() {
     setUpAnimation();
@@ -120,6 +126,20 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                   child: Text("NEAR Learning App"),
                 ),
               ),
+              
+              AnimatedPositioned(
+                  duration: defaultDuration * 0.1,
+                  bottom: keyboardHide ? _size.height * 0.2 : _size.height * (0.0 - 0.5),
+                  left: 0,
+                  right: _isShowingSignUp ? -_size.width * 0.06 : _size.width * 0.06,
+                  child: Column(
+                    children: [ ElevatedButton(
+                        onPressed: stateIngles,
+                        child: ingles ? const Text("Cambiar a Español") : const Text("Change to English"),
+                    ),
+                    ],
+                  ),
+              ),
 
               //Botones Sociales
               AnimatedPositioned(
@@ -139,9 +159,9 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                     duration: defaultDuration,
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: _isShowingSignUp ? 20 : 32,
+                      fontSize: _isShowingSignUp ? 22 : 32,
                       fontWeight: FontWeight.bold,
-                      color: _isShowingSignUp ? Colors.white : Colors.white70,
+                      color: !_isShowingSignUp ? Colors.white : Colors.white70,
                     ),
                     child: Transform.rotate(
                       angle: -_animationTextRotate.value * pi / 180,
@@ -161,8 +181,9 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                               vertical: defaultPadding * 0.60),
                           width: 160,
                           //color: Colors.redAccent,
-                          child: Text(
-                            "Iniciar Sesión".toUpperCase(),
+                          child: ingles ? Text("Log in".toUpperCase()
+                          ) : Text(
+                            "Iniciar Sesión".toUpperCase()
                           ),
                         ),
                       ),
@@ -179,7 +200,7 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                   duration: defaultDuration,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: !_isShowingSignUp ? 20 : 32,
+                    fontSize: !_isShowingSignUp ? 22 : 32,
                     fontWeight: FontWeight.bold,
                     color: _isShowingSignUp ? Colors.white : Colors.white70,
                   ),
@@ -200,7 +221,8 @@ class _AuthScreenState extends State<AuthScreen> with SingleTickerProviderStateM
                             vertical: defaultPadding * 0.60),
                         width: 160,
                         //color: Colors.redAccent,
-                        child: Text(
+                        child: ingles ? Text("Sign Up".toUpperCase()
+                        ) : Text(
                           "Registrarse ".toUpperCase(),// + _size.toString(),
                         ),
                       ),

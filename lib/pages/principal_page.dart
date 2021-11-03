@@ -1,5 +1,7 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:social_network_test/Widgets/bottom_menu.dart';
 import 'package:social_network_test/Widgets/constants.dart';
 
 class PrincipalPage extends StatefulWidget {
@@ -10,13 +12,13 @@ class PrincipalPage extends StatefulWidget {
 }
 
 class _PrincipalPageState extends State<PrincipalPage> {
-  int currentIndex = 0;
+  //int currentIndex = 0;
 
 
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
-      title: Text(screenTitles[currentIndex]),
+      title: Text(screenTitles[currentScreen]),
       /*Text('Texto de Ejemplo 1'),
       centerTitle: true,
       backgroundColor: Colors.brown,*/
@@ -24,7 +26,7 @@ class _PrincipalPageState extends State<PrincipalPage> {
     ),
     
     body: IndexedStack(
-      index: currentIndex,
+      index: currentScreen,
         children: screens,
     ),
 
@@ -68,7 +70,17 @@ class _PrincipalPageState extends State<PrincipalPage> {
       ),
     ),
 
-    bottomNavigationBar: BottomNavigationBar(
+    bottomNavigationBar: CurvedNavigationBar(
+      height: 60,
+      index: currentScreen,
+      items: iconsBottomBar,
+      onTap: (index) => setState(() => currentScreen = index),
+      backgroundColor: Colors.transparent,
+      //backgroundColor: screenColors[currentScreen],
+      color: greenNEAR.withOpacity(0.50),
+      //buttonBackgroundColor: screenColors[_currentIndex],
+    )
+    /*BottomNavigationBar(
       selectedItemColor: Colors.white,
       unselectedItemColor: Colors.white70,
       onTap: (index) => setState(() => currentIndex = index),
@@ -77,7 +89,7 @@ class _PrincipalPageState extends State<PrincipalPage> {
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Home',
-          backgroundColor: Colors.blue,
+          backgroundColor: screenColors[currentIndex],
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.favorite),
@@ -100,6 +112,6 @@ class _PrincipalPageState extends State<PrincipalPage> {
             backgroundColor: Colors.deepOrangeAccent
           ),
       ],
-    ),
+    ),*/
   );
 }
