@@ -9,21 +9,25 @@ class SnippetsPage extends StatefulWidget {
 }
 
 class _SnippetsPageState extends State<SnippetsPage> {
+  List _items = [];
   var data;
+  var urlTest = "assets/json/urlTest.json";
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    fetchData();
+    readJson();
     setState(() {});
   }
 
-  fetchData()async{
-    var respuesta = await http.get(Uri.parse(urlSnippets));
-    data = jsonDecode(respuesta.body);
+  Future<void> readJson() async {
+    final response = await jsonDecode(urlTest);
+    final data = await jsonDecode(response);
     print(data);
     if (data != null) {
-      setState(() {});
+      setState(() {
+        _items = data;
+      });
     }
   }
 
@@ -34,21 +38,22 @@ class _SnippetsPageState extends State<SnippetsPage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    //appBar: AppBar(
-      //title: Text('Snippets'),
-    //),
-    body: data != null
-        ? ListView.builder(itemBuilder: (context, index){
-          return ListTile(
-            title: Text(data[index]["title"]),
-            subtitle: Text("ID: ${data[index]["id"]}"),
-            leading: Image.network(data[index]["url"]),
-          );
-    },
-    itemCount: data.length,
-    )
-        : Center(
-      child: CircularProgressIndicator(),
-    ),
-  );
+        //appBar: AppBar(
+        //title: Text('Snippets'),
+        //),
+        body: data != null
+            ? ListView.builder(
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text(_items[index]["title"]),
+                    subtitle: Text("ID: ${_items[index]["id"]}"),
+                    leading: Image.network(_items[index]["url"]),
+                  );
+                },
+                itemCount: _items.length,
+              )
+            : Center(
+                child: CircularProgressIndicator(),
+              ),
+      );
 }

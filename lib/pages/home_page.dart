@@ -1,10 +1,83 @@
 import 'package:flutter/material.dart';
+import 'package:social_network_test/Widgets/constants.dart';
 
-class HomePage extends StatelessWidget {
-  Widget build(BuildContext context) => Scaffold(
-    //appBar: AppBar(
-      //title: Text('Home'),
-    //),
-    body:Center(child: Text('Home', style: TextStyle(fontSize: 60),),),
-  );
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: [
+          Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            color: blueNEAR,
+            margin: EdgeInsets.all(2.0),
+            shadowColor: lilacNEAR,
+            elevation: 20.0,
+            child: SizedBox(
+                width: 200,
+                height: 100,
+                child: Text(
+                  'Hello World',
+                  style: TextStyle(color: greenNEAR),
+                )),
+          ),
+          Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            color: blueNEAR,
+            margin: EdgeInsets.all(2.0),
+            shadowColor: lilacNEAR,
+            elevation: 20.0,
+            child: SizedBox(
+                width: 200,
+                height: 100,
+                child: Text(
+                  'Hello World',
+                  style: TextStyle(color: greenNEAR),
+                )),
+          ),
+          Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            color: blueNEAR,
+            margin: EdgeInsets.all(2.0),
+            shadowColor: lilacNEAR,
+            elevation: 20.0,
+            child: SizedBox(
+                width: 200,
+                height: 100,
+                child: Text(
+                  'Hello World',
+                  style: TextStyle(color: greenNEAR),
+                )),
+          ),
+          Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            color: blueNEAR,
+            margin: EdgeInsets.all(2.0),
+            shadowColor: lilacNEAR,
+            elevation: 20.0,
+            child: SizedBox(
+                width: 200,
+                height: 100,
+                child: Text(
+                  'Hello World',
+                  style: TextStyle(color: greenNEAR),
+                )),
+          ),
+        ],
+      ),
+    );
+  }
 }

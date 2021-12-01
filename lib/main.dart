@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:social_network_test/Widgets/bottom_menu.dart';
 import 'package:social_network_test/Widgets/constants.dart';
 import 'package:social_network_test/pages/auth_screen.dart';
 import 'package:social_network_test/pages/principal_page.dart';

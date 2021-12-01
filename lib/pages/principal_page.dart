@@ -1,7 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:social_network_test/Widgets/bottom_menu.dart';
 import 'package:social_network_test/Widgets/constants.dart';
 
 class PrincipalPage extends StatefulWidget {

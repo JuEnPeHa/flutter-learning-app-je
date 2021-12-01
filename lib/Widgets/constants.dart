@@ -26,7 +26,7 @@ final String logoNEAR = 'assets/images/nearLogos/near_icon_wht.svg';
 final screens = [
   FeedPage(),
   SnippetsPage(),
-  HomePage(),
+  MyHomePage(),
   ProfilePage(),
   TestPage(),
 ];
