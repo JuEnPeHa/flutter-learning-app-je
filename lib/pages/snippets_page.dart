@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'package:social_network_test/Widgets/constants.dart';
 import 'dart:convert';
 
 class SnippetsPage extends StatefulWidget {
