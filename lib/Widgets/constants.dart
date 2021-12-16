@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_network_test/pages/example_page.dart';
 import 'package:social_network_test/pages/snippets_page.dart';
 import 'package:social_network_test/pages/feed_page.dart';
 import 'package:social_network_test/pages/home_page.dart';
@@ -29,14 +30,17 @@ final screens = [
   MyHomePage(),
   ProfilePage(),
   TestPage(),
+  ExamplePage(),
 ];
 
 final screenTitles = [
   "Learning Path",
   "Temas",
   "HomePage",
-  "Snippets",
-  "Tests"
+  "Temas",
+  "Tests",
+  "1",
+  "2",
 ];
 
 final int limitHeight = 1000;
@@ -63,4 +67,6 @@ final iconsBottomBar = <Widget>[
   Icon(Icons.home, size: 30,),
   Icon(Icons.set_meal_sharp, size: 30,),
   Icon(Icons.person_pin_circle_rounded, size: 30,),
+  Icon(Icons.ac_unit_outlined, size: 30,),
+  Icon(Icons.account_balance_wallet_sharp, size: 30,),
 ];
