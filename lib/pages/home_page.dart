@@ -10,72 +10,300 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
+      body: Column(
         children: [
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
+          Container(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                ],
+              ),
             ),
-            color: blueNEAR,
-            margin: EdgeInsets.all(2.0),
-            shadowColor: lilacNEAR,
-            elevation: 20.0,
-            child: SizedBox(
-                width: 200,
-                height: 100,
-                child: Text(
-                  'Hello World',
-                  style: TextStyle(color: greenNEAR),
-                )),
           ),
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
+          Container(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                ],
+              ),
             ),
-            color: blueNEAR,
-            margin: EdgeInsets.all(2.0),
-            shadowColor: lilacNEAR,
-            elevation: 20.0,
-            child: SizedBox(
-                width: 200,
-                height: 100,
-                child: Text(
-                  'Hello World',
-                  style: TextStyle(color: greenNEAR),
-                )),
           ),
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
+          Container(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                ],
+              ),
             ),
-            color: blueNEAR,
-            margin: EdgeInsets.all(2.0),
-            shadowColor: lilacNEAR,
-            elevation: 20.0,
-            child: SizedBox(
-                width: 200,
-                height: 100,
-                child: Text(
-                  'Hello World',
-                  style: TextStyle(color: greenNEAR),
-                )),
           ),
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
+          Container(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    color: blueNEAR,
+                    margin: EdgeInsets.all(2.0),
+                    shadowColor: lilacNEAR,
+                    elevation: 20.0,
+                    child: SizedBox(
+                        width: 200,
+                        height: 100,
+                        child: Text(
+                          'Hello World',
+                          style: TextStyle(color: greenNEAR),
+                        )),
+                  ),
+                ],
+              ),
             ),
-            color: blueNEAR,
-            margin: EdgeInsets.all(2.0),
-            shadowColor: lilacNEAR,
-            elevation: 20.0,
-            child: SizedBox(
-                width: 200,
-                height: 100,
-                child: Text(
-                  'Hello World',
-                  style: TextStyle(color: greenNEAR),
-                )),
-          ),
+          )
         ],
       ),
     );
