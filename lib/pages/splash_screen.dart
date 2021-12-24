@@ -9,14 +9,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     Future.delayed(
-      Duration(milliseconds: 2500),
-        ()=> Navigator.pushReplacementNamed(context, /*PrincipalPage.id*/ AuthScreen.id)
+        Duration(milliseconds: 500),
+        () => Navigator.pushReplacementNamed(
+            context, /*PrincipalPage.id*/ AuthScreen.id)
 
-          /*
+        /*
           ()=> Navigator.push(
         context,
         MaterialPageRoute(
@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       ),*/
 
-    );    // TODO: implement initState
+        ); // TODO: implement initState
     super.initState();
   }
 
@@ -39,13 +39,14 @@ class _SplashScreenState extends State<SplashScreen> {
             children: <Widget>[
               Spacer(),
               Center(
-                child: FractionallySizedBox(widthFactor: 0.8,
+                child: FractionallySizedBox(
+                  widthFactor: 0.8,
                   child: CircleAvatar(
-                      radius: 100 ,
-                      backgroundColor: Colors.white54,
-                      child: SvgPicture.asset(logoNEAR, color: Colors.white),
+                    radius: 100,
+                    backgroundColor: Colors.white54,
+                    child: SvgPicture.asset(logoNEAR, color: Colors.white),
+                  ),
                 ),
-              ),
               ),
               Spacer(),
               CircularProgressIndicator(),
@@ -54,11 +55,8 @@ class _SplashScreenState extends State<SplashScreen> {
               SizedBox(height: 30),
             ],
           ),
-
         ),
       ),
-
     );
   }
 }
-

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
+import 'package:social_network_test/model/url_test.dart';
 
 class SnippetsPage extends StatefulWidget {
   @override
@@ -7,26 +7,11 @@ class SnippetsPage extends StatefulWidget {
 }
 
 class _SnippetsPageState extends State<SnippetsPage> {
-  List _items = [];
-  var data;
-  var urlTest = "assets/json/urlTest.json";
+  //List _items = [sample_url];
 
   @override
   void initState() {
     super.initState();
-    readJson();
-    setState(() {});
-  }
-
-  Future<void> readJson() async {
-    final response = await jsonDecode(urlTest);
-    final data = await jsonDecode(response);
-    print(data);
-    if (data != null) {
-      setState(() {
-        _items = data;
-      });
-    }
   }
 
   @override
@@ -36,22 +21,17 @@ class _SnippetsPageState extends State<SnippetsPage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        //appBar: AppBar(
-        //title: Text('Snippets'),
-        //),
-        body: data != null
-            ? ListView.builder(
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(_items[index]["title"]),
-                    subtitle: Text("ID: ${_items[index]["id"]}"),
-                    leading: Image.network(_items[index]["url"]),
-                  );
-                },
-                itemCount: _items.length,
-              )
-            : Center(
-                child: CircularProgressIndicator(),
-              ),
-      );
+          //appBar: AppBar(
+          //title: Text('Snippets'),
+          //),
+          body: ListView.builder(
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(sample_url[index]["title"]),
+            subtitle: Text("ID: ${sample_url[index]["id"]}"),
+            leading: Image.network(sample_url[index]["url"]),
+          );
+        },
+        itemCount: sample_url.length,
+      ));
 }

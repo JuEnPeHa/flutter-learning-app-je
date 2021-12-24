@@ -45,6 +45,16 @@ dependencies:
 
 dev_dependencies:
   flutter_app_name: ^0.1.1
+  flutter_native_splash: ^1.3.2
+
+flutter_native_splash:
+  color: "#fffacd"
+  image: assets/images/nearLogos/noMargin/icon_nm.png
+  color_dark: "1e2040"
+  image_dark: assets/images/nearLogos/noMargin/icon_wht_nm.png
+  android: true
+  ios: true
+
 
   flutter_test:
     sdk: flutter
@@ -100,7 +110,8 @@ flutter:
     - assets/images/nearLogos/noMargin/logo_wht_nm.svg
     - assets/images/nearLogos/noMargin/type_nm.svg
     - assets/images/nearLogos/noMargin/type_wht_nm.svg
-    - assets/json/urlTest.json
+    - assets/images/Image (69).jpg
+    - assets/images/nearLogos/noMargin/icon_wht_nm.png
 
 
   # To add assets to your application, add an assets section, like this:

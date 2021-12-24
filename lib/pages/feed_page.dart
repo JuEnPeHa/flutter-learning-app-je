@@ -14,7 +14,7 @@ class _FeedPageState extends State<FeedPage> {
   List cardList = [
     SnippetsPage(),
     SnippetsPage(),
-    //SnippetsPage(),
+    SnippetsPage(),
     //SnippetsPage(),
     //FeedPage()
   ];
@@ -35,9 +35,9 @@ class _FeedPageState extends State<FeedPage> {
           options: CarouselOptions(
             height: 200.0,
             autoPlay: true,
-            autoPlayInterval: Duration(seconds: 3),
-            autoPlayAnimationDuration: Duration(milliseconds: 800),
-            autoPlayCurve: Curves.fastOutSlowIn,
+            autoPlayInterval: Duration(seconds: 5),
+            autoPlayAnimationDuration: Duration(milliseconds: 2500),
+            autoPlayCurve: Curves.easeInSine,
             pauseAutoPlayOnTouch: true,
             aspectRatio: 2.0,
             onPageChanged: (index, reason) {
@@ -66,7 +66,11 @@ class _FeedPageState extends State<FeedPage> {
                 width: 20.0,
                 height: 20.0,
                 margin: EdgeInsets.all(20.0),
-                decoration: BoxDecoration( shape: BoxShape.circle, color: _currentIndex == index ? Colors.blueAccent : Colors.grey),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: _currentIndex == index
+                        ? Colors.blueAccent
+                        : Colors.grey),
               );
             }))
       ],
