@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:social_network_test/Widgets/constants.dart';
+import 'package:social_network_test/experimental/widget_challenge.dart';
 import 'package:social_network_test/pages/auth_screen.dart';
+import 'package:social_network_test/pages/first_page.dart';
 import 'package:social_network_test/pages/principal_page.dart';
 import 'package:social_network_test/pages/splash_screen.dart';
 
@@ -27,7 +29,8 @@ class MyApp extends StatelessWidget {
               vertical: defaultPadding * 1.2, horizontal: defaultPadding),
         ),
       ),
-      home: AuthScreen() /*SplashScreen()*/ /*BottomMenuLA()*/,
+      home:
+          FirstPage() /*MainExpandableNavBarState()*/ /*AuthScreen()*/ /*SplashScreen()*/ /*BottomMenuLA()*/,
       //initialRoute: PrincipalPage.id,
       routes: {
         PrincipalPage.id: (_) => PrincipalPage(),

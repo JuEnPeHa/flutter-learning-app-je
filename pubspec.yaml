@@ -42,6 +42,7 @@ dependencies:
   flutter_spinkit: ^5.1.0
   velocity_x: ^3.3.0
   get: ^4.6.1
+  lottie: ^1.2.1
 
 dev_dependencies:
   flutter_app_name: ^0.1.1
@@ -112,6 +113,9 @@ flutter:
     - assets/images/nearLogos/noMargin/type_wht_nm.svg
     - assets/images/Image (69).jpg
     - assets/images/nearLogos/noMargin/icon_wht_nm.png
+    - assets/json/learn.json
+    - assets/json/learning-concept.json
+    - assets/json/video-learning.json
 
 
   # To add assets to your application, add an assets section, like this:
