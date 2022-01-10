@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:social_network_test/Widgets/constants.dart';
+import 'package:social_network_test/Widgets/custom_page_route.dart';
 import 'package:social_network_test/Widgets/responsive_button.dart';
 import 'package:social_network_test/model/lottie_animations.dart';
+import 'package:social_network_test/pages/extra_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class FirstPage extends StatefulWidget {
@@ -36,27 +38,28 @@ class _FirstPageState extends State<FirstPage> {
           itemCount: lottieAnim(index)[1],
           itemBuilder: (context, index) {
             var size = 30.0;
-            return Stack(
-              children: <Widget>[
-                bodyBackgroundFirstPage(context, index),
-                Container(
-                  margin: EdgeInsets.only(top: 0, left: 20, right: 20),
-                  child: Row(
+            return Stack(children: <Widget>[
+              bodyBackgroundFirstPage(context, index),
+              Container(
+                margin: EdgeInsets.only(top: 0, left: 20, right: 20),
+                child: Column(children: [
+                  SizedBox(
+                    height: 150,
+                    width: MediaQuery.of(context).size.width - 40,
+                    child: const DecoratedBox(
+                      decoration: BoxDecoration(color: Vx.gray50),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(
-                            height: 150,
-                            width: MediaQuery.of(context).size.width - 40,
-                            child: const DecoratedBox(
-                              decoration: BoxDecoration(color: Vx.gray50),
-                            ),
-                          ),
                           Text(
                             titleLottieAnim(index),
                             style: TextStyle(
-                                backgroundColor: Vx.white,
+                                //backgroundColor: Vx.white,
                                 color: color,
                                 fontSize: size,
                                 fontWeight: FontWeight.bold),
@@ -89,11 +92,30 @@ class _FirstPageState extends State<FirstPage> {
                           ),
                         ],
                       ),
+                      Column(
+                        children: List.generate(
+                          3,
+                          (indexDots) {
+                            return Container(
+                              margin:
+                                  const EdgeInsets.only(bottom: 4.0, top: 0.0),
+                              width: 8.0,
+                              height: index == indexDots ? 25.0 : 8,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                color: index == indexDots
+                                    ? Vx.blue500
+                                    : Vx.blue500.withOpacity(0.5),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
                     ],
                   ),
-                ),
-              ],
-            );
+                ]),
+              ),
+            ]);
           }),
     );
     //Container(child: lottieAnim(2, false),);

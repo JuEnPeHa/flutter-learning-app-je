@@ -1,4 +1,4 @@
-import 'package:path/path.dart';
+/*import 'package:path/path.dart';
 import 'package:social_network_test/model/note.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -61,3 +61,4 @@ class NotesDatabase {
     db.close();
   }
 }
+*/

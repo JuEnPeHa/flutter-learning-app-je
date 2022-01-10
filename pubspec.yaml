@@ -43,6 +43,7 @@ dependencies:
   velocity_x: ^3.3.0
   get: ^4.6.1
   lottie: ^1.2.1
+  #audioplayers: ^0.20.1
 
 dev_dependencies:
   flutter_app_name: ^0.1.1
