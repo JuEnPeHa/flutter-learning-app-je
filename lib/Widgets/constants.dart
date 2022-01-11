@@ -4,7 +4,7 @@ import 'package:social_network_test/pages/snippets_page.dart';
 import 'package:social_network_test/pages/feed_page.dart';
 import 'package:social_network_test/pages/home_page.dart';
 import 'package:social_network_test/pages/profile_page.dart';
-import 'package:social_network_test/pages/test_page.dart';
+import 'package:social_network_test/pages/temas_page.dart';
 
 const Color login_bg = Color(0xFF4FD1D9);
 const Color signup_bg = Color(0xFFE3935B);
@@ -29,7 +29,7 @@ final screens = [
   SnippetsPage(),
   MyHomePage(),
   ProfilePage(),
-  TestPage(),
+  TemasPage(),
   ExamplePage(),
 ];
 

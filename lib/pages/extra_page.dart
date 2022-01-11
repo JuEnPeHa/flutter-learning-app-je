@@ -4,18 +4,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-Future<Post> fetchPost() async {
-  var url = 'https://jsonplaceholder.typicode.com/posts';
-  var response = await http.get(Uri.parse(url));
 
-  if (response.statusCode == 200) {
-    // Si la llamada al servidor fue exitosa, analiza el JSON
-    return Post.fromJson(json.decode(response.body));
-  } else {
-    // Si la llamada no fue exitosa, lanza un error.
-    throw Exception('Failed to load post');
-  }
-}
 
 class Post {
   var userId;
@@ -38,8 +27,6 @@ class Post {
     );
   }
 }
-
-void main() => runApp(FluttlerDev(post: fetchPost()));
 
 class FluttlerDev extends StatefulWidget {
   final Future<Post> post;

@@ -1,10 +1,13 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:social_network_test/Widgets/constants.dart';
 import 'package:social_network_test/Widgets/login_form.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social_network_test/Widgets/sign_up_form.dart';
+import 'package:social_network_test/Widgets/snake_button.dart';
 import 'package:social_network_test/Widgets/social_buttons.dart';
+import 'package:social_network_test/pages/navpages/second_main_page.dart';
 import 'package:social_network_test/pages/principal_page.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -79,7 +82,7 @@ class _AuthScreenState extends State<AuthScreen>
                   height: _size.height,
                   left: _isShowingSignUp ? -_size.width / 5 * 4.0 : 0,
                   child: Container(
-                    color: login_bg,
+                    color: login_bg.withOpacity(0.75),
                     child: LoginForm(),
                   ),
                 ),
@@ -93,7 +96,7 @@ class _AuthScreenState extends State<AuthScreen>
                       ? _size.width / (5 * 2)
                       : _size.width / 5 * 4.5,
                   child: Container(
-                    color: signup_bg,
+                    color: signup_bg.withOpacity(0.75),
                     child: SignUpForm(),
                   ),
                 ),
@@ -111,7 +114,9 @@ class _AuthScreenState extends State<AuthScreen>
                     backgroundColor: Colors.white54,
                     child: SvgPicture.asset(
                       logoNEAR,
-                      color: _isShowingSignUp ? signup_bg : login_bg,
+                      color: _isShowingSignUp
+                          ? signup_bg.withOpacity(0.5)
+                          : login_bg.withOpacity(0.5),
                     ),
                   ),
                 ),
@@ -134,6 +139,23 @@ class _AuthScreenState extends State<AuthScreen>
                     child: Text("NEAR Learning App"),
                   ),
                 ),
+
+                Positioned(
+                    bottom: !keyboardHide
+                        ? _size.height * 0.01
+                        : _size.height * 0.275,
+                    left: _isShowingSignUp
+                        ? _size.width * 0.225
+                        : _size.width * 0.175,
+                    child: SnakeButton(
+                      child: Text("Iniciar Sesión con NEAR Wallet"),
+                      onTap: () {
+                        print("clickeado");
+                      },
+                      snakeColor: greenNEAR,
+                      borderColor: Colors.white,
+                      borderWidth: 10,
+                    )),
 
                 AnimatedPositioned(
                   duration: defaultDuration * 0.1,
@@ -172,12 +194,14 @@ class _AuthScreenState extends State<AuthScreen>
                 AnimatedPositioned(
                   duration: defaultDuration * 0.5,
                   bottom: _isShowingSignUp /*Si estamos en Sign Up*/ ? keyboardHide /*Si el teclado esta oculto*/ ? _size
-                          .height /
+                              .height /
+                          100 +
                       100 /*Si el teclado esta oculto y estamos en Sign Up*/ : _size
                           .height *
                       -0.175 /*Si el teclado esta visible y estamos en Sign Up*/ : keyboardHide /*Si el teclado esta oculto y estamos en Log In*/ ? _size
-                          .height *
-                      0.3 /*Si el teclado esta oculto y estamos en Log In*/ : _size
+                              .height *
+                          0.3 +
+                      100 /*Si el teclado esta oculto y estamos en Log In*/ : _size
                           .height *
                       0.075 /*Si el teclado esta visible y estamos en Log In*/,
                   left: _isShowingSignUp
@@ -202,15 +226,16 @@ class _AuthScreenState extends State<AuthScreen>
                             updateView();
                           } else {
                             //Login
-                            Navigator.pushReplacementNamed(
-                                context, PrincipalPage.id);
+                            /*Navigator.pushReplacementNamed(
+                                context, PrincipalPage.id);*/
+                            Get.to(SecondMainPage());
                           }
                         },
                         child: Container(
                           padding: const EdgeInsets.symmetric(
                               vertical: defaultPadding * 0.60),
                           width: !_isShowingSignUp ? 160 : 640,
-                          color: Colors.redAccent,
+                          //color: Colors.redAccent.withOpacity(0.2),
                           child: ingles
                               ? Text("Log in".toUpperCase())
                               : Text("Iniciar Sesión".toUpperCase()),
@@ -224,14 +249,16 @@ class _AuthScreenState extends State<AuthScreen>
                 AnimatedPositioned(
                   duration: defaultDuration * 0.5,
                   bottom: !_isShowingSignUp /*Si estamos en Log In*/ ? keyboardHide /*Si el teclado está oculto*/ ? _size
-                              .height /
+                                  .height /
+                              100 +
                           100 /*Si el teclado está oculto y estamos en Log In*/ : _size
                               .height *
                           -0.175 /*Si el teclado está visible y estamos en Log In*/ :
                       /*_isShowingSignUp - Si estamos en Sign Up*/
                       keyboardHide /*Si el teclado está oculto y estamos en Sign Up*/ ? _size
-                              .height *
-                          0.3 /*Si el teclado está oculto y estamos en Sign Up*/ : _size
+                                  .height *
+                              0.3 +
+                          100 /*Si el teclado está oculto y estamos en Sign Up*/ : _size
                               .height *
                           0.075 /*Si el teclado está visible y estamos en Sign Up*/,
                   right: !_isShowingSignUp
@@ -262,7 +289,7 @@ class _AuthScreenState extends State<AuthScreen>
                           padding: const EdgeInsets.symmetric(
                               vertical: defaultPadding * 0.60),
                           width: _isShowingSignUp ? 160 : 640,
-                          color: Colors.redAccent,
+                          //color: Colors.redAccent.withOpacity(0.2),
                           child: ingles
                               ? Text("Sign Up".toUpperCase())
                               : Text(

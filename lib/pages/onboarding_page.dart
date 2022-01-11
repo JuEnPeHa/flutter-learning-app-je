@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:social_network_test/Widgets/constants.dart';
 import 'package:social_network_test/Widgets/custom_page_route.dart';
 import 'package:social_network_test/Widgets/responsive_button.dart';
 import 'package:social_network_test/model/lottie_animations.dart';
+import 'package:social_network_test/pages/auth_screen.dart';
 import 'package:social_network_test/pages/extra_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class FirstPage extends StatefulWidget {
-  const FirstPage({Key? key}) : super(key: key);
+class OnboardingPage extends StatefulWidget {
+  const OnboardingPage({Key? key}) : super(key: key);
 
   @override
-  _FirstPageState createState() => _FirstPageState();
+  _OnboardingPageState createState() => _OnboardingPageState();
 }
 
-class _FirstPageState extends State<FirstPage> {
+class _OnboardingPageState extends State<OnboardingPage> {
   @override
   void initState() {
     // TODO: implement initState
@@ -87,8 +89,19 @@ class _FirstPageState extends State<FirstPage> {
                           SizedBox(
                             height: 40,
                           ),
-                          ResponsiveButton(
-                            width: 120,
+                          GestureDetector(
+                            onTap: () {
+                              Get.to(AuthScreen());
+                            },
+                            child: Container(
+                              width: 200,
+                              child: Row(children: [
+                                ResponsiveButton(
+                                  isResponsive: false,
+                                  width: 120,
+                                ),
+                              ]),
+                            ),
                           ),
                         ],
                       ),

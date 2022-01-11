@@ -84,6 +84,8 @@ flutter:
     - assets/images/Copia de JEPH.svg
     - assets/images/Copia de JEPH.png
     - assets/images/google-round.png
+    - assets/images/facebook-round.png
+    - assets/images/apple-round.png
     - assets/images/despaired-2261021_640.jpg
     - assets/images/JEPH (1).gif
     - assets/images/train-797072_640.jpg
@@ -117,6 +119,13 @@ flutter:
     - assets/json/learn.json
     - assets/json/learning-concept.json
     - assets/json/video-learning.json
+    - assets/images/logosVerMas/paras.jpeg
+    - assets/images/logosVerMas/mintbase.jpeg
+    - assets/images/logosVerMas/aurora-dev.jpeg
+    - assets/images/logosVerMas/near-docs.jpeg
+    - assets/images/backgroundGradient/(1).jpg
+    - assets/images/backgroundGradient/(2).jpg
+    - assets/images/backgroundGradient/(3).jpg
 
 
   # To add assets to your application, add an assets section, like this:
