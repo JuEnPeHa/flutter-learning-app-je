@@ -32,6 +32,12 @@ class _SnippetsPageState extends State<SnippetsPage> {
             width: double.maxFinite,
             child: Column(
               children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(Icons.arrow_back_ios),
+                ),
                 Text(
                   "Create Account\n",
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -39,10 +45,10 @@ class _SnippetsPageState extends State<SnippetsPage> {
                 Text(
                     "// Crea una nueva cuenta usando fondos de la cuenta usada para crearla\n"),
                 Text(
-                    "const near = await connect(config);\n\nconst account = await near.account(\"example-account.testnet\");\n"),
+                    "const near = await connect(config);\nconst account = await near.account(\"example-account.testnet\");\n"),
                 Text('''await account.createAccount(
-  "example-account2.testnet", // Nombre de la nueva cuenta\n
-  "8hSHprDq2StXwMtNd43wDTXQYsjXcD4MJTXQYsjXcc", // Clave publica de la nueva cuenta\n
+  "example-account2.testnet", // Nombre de la nueva cuenta
+  "8hSHprDq2StXwMtNd43wDTXQYsjXcD4MJTXQYsjXcc", // Clave publica de la nueva cuenta
   "10000000000000000000" // Balance inicial de la nueva cuenta en yoctoNEAR);''')
               ],
             ),

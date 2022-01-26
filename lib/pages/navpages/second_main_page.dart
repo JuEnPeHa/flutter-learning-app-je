@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:social_network_test/Widgets/complex_drawer_page.dart';
 import 'package:social_network_test/Widgets/constants.dart';
 import 'package:social_network_test/pages/navpages/bar_item_page.dart';
 import 'package:social_network_test/pages/navpages/my_page.dart';
@@ -54,6 +55,7 @@ class _SecondMainPageState extends State<SecondMainPage> {
           BottomNavigationBarItem(title: Text("4"), icon: Icon(Icons.person)),*/
         ],
       ),
+      drawer: ComplexDrawer(),
     );
   }
 }

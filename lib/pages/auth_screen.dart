@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social_network_test/Widgets/sign_up_form.dart';
 import 'package:social_network_test/Widgets/snake_button.dart';
 import 'package:social_network_test/Widgets/social_buttons.dart';
+import 'package:social_network_test/pages/navpages/qr_scan_page.dart';
 import 'package:social_network_test/pages/navpages/second_main_page.dart';
 import 'package:social_network_test/pages/principal_page.dart';
 
@@ -150,11 +151,16 @@ class _AuthScreenState extends State<AuthScreen>
                     child: SnakeButton(
                       child: Text("Iniciar Sesión con NEAR Wallet"),
                       onTap: () {
-                        print("clickeado");
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const QRScanPage(),
+                        ));
+                        //Get.to(QRScanPage());
+                        //print("clickeado");
                       },
-                      snakeColor: greenNEAR,
-                      borderColor: Colors.white,
+                      snakeColor: greenNEAR.withOpacity(0.75),
+                      borderColor: Colors.white.withOpacity(0.8),
                       borderWidth: 10,
+                      duration: Duration(milliseconds: 1500),
                     )),
 
                 AnimatedPositioned(

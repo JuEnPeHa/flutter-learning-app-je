@@ -24,6 +24,12 @@ class BodyQuiz extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.arrow_back_ios),
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
                 child: ProgressBar(),

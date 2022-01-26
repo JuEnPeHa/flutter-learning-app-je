@@ -26,6 +26,12 @@ class ScoreScreen extends StatelessWidget {
         body: Stack(
           fit: StackFit.expand,
           children: [
+            IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.arrow_back_ios),
+            ),
             Column(
               children: [
                 Spacer(

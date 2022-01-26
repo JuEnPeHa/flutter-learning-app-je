@@ -129,8 +129,13 @@ class _DetailPageState extends State<DetailPage> {
                   SizedBox(
                     width: 60,
                   ),
-                  ResponsiveButton(
-                    isResponsive: true,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: ResponsiveButton(
+                      isResponsive: true,
+                    ),
                   ),
                   SizedBox(
                     width: 60,
